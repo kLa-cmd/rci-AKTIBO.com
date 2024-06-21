@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKTIBO by APECS Council - Riverside College Inc.</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+header {
+    background: url('header_background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #ffffff; /* White text */
+}
+
+nav {
+    background-color: #008000; /* Green */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active-link {
+    color: #4CAF50; /* Light green */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #008000; /* Green */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.officers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.officer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.officer img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.officer h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.officer p {
+    margin: 5px 0;
+    font-size: 0.8em; /* Reduced font size for emails */
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Adjust for input padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #6a2c70; /* Purple */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4b1957; /* Darker shade of purple */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a2c70;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #4b1957;
+}
+
+#legend {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+#legend h3 {
+    font-size: 0.8em; /* Reduce font size */
+    margin-bottom: 5px;
+}
+
+#legend ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+#legend ul li {
+    margin-bottom: 3px; /* Adjust margin */
+    font-size: 0.7em; /* Further reduce font size */
+}
+
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.legend-color:nth-child(1) {
+    background-color: #008000; /* Green */
+}
+
+.legend-color:nth-child(2) {
+    background-color: #6a2c70; /* Purple */
+}
+
+.legend-color:nth-child(3) {
+    background-color: #ffff00; /* Yellow */
+}
+
+/* Media Query for Mobile Phones */
+@media screen and (max-width: 600px) {
+    .gallery,
+    .officers {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="eagle_icon.png" alt="APECS Eagle Icon">
+            <h1>AKTIBO</h1>
+            <p>by APECS Council</p>
+            <p>Riverside College Inc., Bacolod City</p>
+        </div>
+    </header>
+    <nav>
+        <a href="#announcements" class="active-link">Announcements</a>
+        <a href="#issues">Issues</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+        <a href="#officers">Officers</a>
+    </nav>
+    <section id="announcements">
+    <h2>Announcements</h2>
+    <p>Stay updated with the latest announcements from the AKTIBO by APECS Council.</p>
+    <div class="gallery">
+        <img src="announcement1.jpg" alt="Announcement 1">
+        <img src="announcement2.jpg" alt="Announcement 2">
+        <img src="announcement3.jpg" alt="Announcement 3">
+    </div>
+
+    <!-- Legend for Color-Coded Announcements -->
+    <div id="legend">
+        <h3>Legend: Color-Coded Announcements</h3>
+        <ul>
+            <li><span class="legend-color" style="background-color: #008000;"></span> Green - Events (Ex. Litmus, General Assembly, College Fest)</li>
+            <li><span class="legend-color" style="background-color: #6a2c70;"></span> Purple - Announcement (Ex. Recruitment of Committee)</li>
+            <li><span class="legend-color" style="background-color: #ffff00;"></span> Yellow - Other Matters (Ex. Motivational Poster)</li>
+        </ul>
+    </div>
+</section>
+
+
+    <section id="issues">
+        <h2>Issues</h2>
+        <p>Addressing the concerns and issues raised by the students under APECS Council.</p>
+        <!-- New form for students to input their concerns -->
+        <form action="submit_concerns.php" method="post" onsubmit="return validateForm()">
+            <input type="text" id="concern" name="concern" placeholder="Your Concern about School Amenities" required aria-label="Your Concern about School Amenities"><br>
+            <input type="submit" value="Submit Concern">
+        </form>
+        <br>
+        <!-- New form for students inquiries -->
+        <form action="submit_inquiry.php" method="post" onsubmit="return validateInquiry()">
+            <input type="email" id="inquiry_email" name="inquiry_email" placeholder="Your Email" required aria-label="Your Email"><br>
+            <textarea id="inquiry_message" name="inquiry_message" placeholder="Your Inquiry" rows="4" required aria-label="Your Inquiry"></textarea><br>
+            <input type="submit" value="Submit Inquiry">
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for any inquiries or feedback:</p>
+        <form action="submit.php" method="post" onsubmit="return validateContactForm()">
+            <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name"><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email"><br>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required aria-label="Your Message"></textarea><br>
+            <input type="hidden" name="csrf_token" value="<?php echo csrf_token(); ?>"> <!-- CSRF token -->
+            <input type="submit" value="Send Message">
+        </form>
+        
+    </section>
+    <section id="about"> <!-- New About Us section -->
+        <h2>About Us</h2>
+        <p>The AKTIBO by APECS Council at Riverside College Inc. is dedicated to representing and addressing the concerns of students. We work towards creating a positive and productive academic environment by facilitating communication between the student body and the administration.</p>
+
+        <p>Our mission is to ensure that every student’s voice is heard and that their issues are resolved in a timely and effective manner. Through various initiatives and programs, we aim to enhance the overall student experience under APECS council.</p>
+
+        <p>Our council is composed of passionate and committed members who strive to uphold the values of integrity, inclusivity, and excellence.</p>
+    </section>
+    <section id="officers">
+        <h2>Officers</h2>
+        <div class="officers">
+            <div class="officer">
+                <img src="cherantonio.jpg" alt="Cherantonio Dyestin Evo Agana">
+                <h3>Cherantonio Dyestin Evo Agana</h3>
+                <p>Governor</p>
+                                <p>BSENT II</p>
+                <p><a href="mailto:cdagana@riversidestudent.edu.ph">cdagana@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="rosh.jpg" alt="Rosh Ilezer Moyong">
+                <h3>Rosh Ilezer Moyong</h3>
+                <p>Vice Governor</p>
+                <p>BSPMY II</p>
+                <p><a href="mailto:rmoyong@riversidestudent.edu.ph">rmoyong@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="bhyoncy.jpg" alt="Bhyoncy Khy Balboa">
+                <h3>Bhyoncy Khy Balboa</h3>
+                <p>Secretary</p>
+                <p>BSPSY II</p>
+                <p><a href="mailto:btbalboa@riversidestudent.edu.ph">btbalboa@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="nica.jpg" alt="Nica Albito">
+                <h3>Nica Albito</h3>
+                <p>Treasurer</p>
+                <p>BSPSY II</p>
+                <p><a href="mailto:ncalbito@riversidestudent.edu.ph">ncalbito@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="sarah.jpg" alt="Sarah Borbon">
+                <h3>Sarah Borbon</h3>
+                <p>Auditor</p>
+                <p>BSPSY II</p>
+                <p><a href="mailto:sgborbon@riversidestudent.edu.ph">sgborbon@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="angel.jpg" alt="Angel Mae Obillos">
+                <h3>Angel Mae Obillos</h3>
+                <p>Senator</p>
+                <p>BSPMY II</p>
+                <p><a href="mailto:asobillos@riversidestudent.edu.ph">asobillos@riversidestudent.edu.ph</a></p>
+            </div>
+            <div class="officer">
+                <img src="meca.jpg" alt="Meca Grace Tabligan">
+                <h3>Meca Grace Tabligan</h3>
+                <p>Senator</p>
+                <p>BSPSY III</p>
+                <p><a href="mailto:mgtabligan@riversidestudent.edu.ph">mgtabligan@riversidestudent.edu.ph</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AKTIBO by APECS Council. All rights reserved.</p>
+    </footer>
+    <div class="back-to-top" onclick="scrollToTop()">&#8679;</div>
+    <script>
+        // Function for concerns form validation
+        function validateForm() {
+            var concern = document.getElementById("concern").value;
+            if (concern === "") {
+                alert("Please enter your concern.");
+                return false;
+            }
+            alert("Your concern has been submitted successfully.");
+            return true;
+        }
+
+        // Function for inquiries form validation
+        function validateInquiry() {
+            var inquiryEmail = document.getElementById("inquiry_email").value;
+            var inquiryMessage = document.getElementById("inquiry_message").value;
+
+            if (inquiryEmail === "" || inquiryMessage === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (!validateEmail(inquiryEmail)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Your inquiry has been submitted successfully.");
+            return true;
+        }
+
+        // Function for contact form validation
+        function validateContactForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Your message has been sent successfully.");
+            return true;
+        }
+
+        // Email validation function
+        function validateEmail(email) {
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Remove active class from all links
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active-link'));
+                // Add active class to the clicked link
+                this.classList.add('active-link');
+            });
+        });
+
+        // Back-to-top button functionality
+        window.onscroll = function() {toggleBackToTop()};
+
+        function toggleBackToTop() {
+            var backToTop = document.querySelector(".back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
+
